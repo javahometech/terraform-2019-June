@@ -4,7 +4,7 @@ resource "aws_instance" "nat" {
   subnet_id              = "${local.public_subnet_ids[0]}"
   source_dest_check      = false
   vpc_security_group_ids = ["${aws_security_group.nat.id}"]
-  key_name               = "javahome-7am"
+  key_name               = "kubernetes"
   tags = {
     Name = "Nat Instance"
   }

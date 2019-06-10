@@ -58,3 +58,11 @@ variable "nat_amis" {
     ap-southeast-1 = "ami-0096082b44d750d5d"
   }
 }
+
+variable "web_ami" {
+  type = "map"
+  default = {
+    ap-south-1     = "ami-00e782930f1c3dbc7"
+    ap-southeast-1 = "ami-0b5a47f8865280111"
+  }
+}
