@@ -9,6 +9,7 @@ resource "aws_instance" "web" {
   key_name               = "kubernetes"
   user_data              = "${file("apache.sh")}"
   vpc_security_group_ids = ["${aws_security_group.web.id}"]
+  iam_instance_profile   = "${aws_iam_instance_profile.ec2_profile.name}"
   tags = {
     Name = "Webserver-${count.index + 1}"
   }

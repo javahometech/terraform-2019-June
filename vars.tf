@@ -66,3 +66,7 @@ variable "web_ami" {
     ap-southeast-1 = "ami-0b5a47f8865280111"
   }
 }
+
+variable "s3_bucket_arn" {
+  default = "arn:aws:s3:::javahome.k8s"
+}
